@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Com';
+    src: url('./fonts/Commissioner-VariableFont_wght.ttf');
+}
+
+a {
+    font-family: 'Com', sans-serif;
+}
+
+p {
+    font-family: 'Com', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Com', sans-serif;
+}
+
+span {
+    font-family: 'Com', sans-serif;
+}
+
+.Todo {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+}
+
+button {
+    font-family: 'Com', sans-serif;
+    padding: 5px 15px;
+    color: black;
+    background-color: transparent;
+    border: 1px rgb(184, 184, 184) solid
+}
+
+input {
+    color: black;
+    width: 100%;
+    border: 1px rgb(184, 184, 184) solid;
+    padding: 5px 15px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.todo__name {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.todo__circul {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 10px;
+}
+
+.weather__info {
+    display: flex;
+    margin-top: 10px;
+    column-gap: 10px;
+}
+
+.navLink.activeStyle {
+    color: white;
+    text-transform: uppercase;
+}
