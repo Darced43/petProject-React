@@ -55,7 +55,7 @@ input:focus {
 .todo__name {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    justify-content: space-between;
 }
 
 .todo__circul {
