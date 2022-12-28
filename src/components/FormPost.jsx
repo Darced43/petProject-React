@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MyButton } from "./UI/button/MyButton";
 import { MyInput } from './UI/input/MyInput'
 
-export const FormPost = ({create}) => {
+export const FormPost = ({create, addIndexedDB}) => {
     const [Itask, setTask] = useState({name:''})
 
     const addNewTask = (event) => {
@@ -11,8 +11,8 @@ export const FormPost = ({create}) => {
             event.preventDefault()
             const newTodoTask = {...Itask, id: Date.now()}
             create(newTodoTask)
+            addIndexedDB(Itask.name, newTodoTask.id)
             setTask({name:''})
-            console.log(Itask)
         }else{
             event.preventDefault()
         }
@@ -25,7 +25,7 @@ export const FormPost = ({create}) => {
                     type='text'
                     placeholder="Название задачи"
                     value={Itask.name}
-                    onChange={e => setTask({...Itask, name:e.target.value})}
+                    onChange={e => setTask({name:e.target.value})}
                 />
                 <MyButton onClick={addNewTask}>Cоздать</MyButton>
             </form>
