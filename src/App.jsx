@@ -2,8 +2,8 @@ import React from "react"
 import {Routes, Route} from 'react-router-dom'
 import { NavBar } from './components/NavBar'
 import { TodoList } from './page/TodoList'
-import { Magazin } from './page/Magazin'
 import { Wether } from './page/Wether'
+import { Magazin } from './page/Magazin'
 import './App.scss'
 
 

@@ -3,7 +3,6 @@ import { MyInput } from '../components/UI/input/MyInput'
 import axios from "axios";
 import { useState } from "react";
 import WeatherINfo from "../components/WeatherInfo";
-import { useEffect } from "react";
 
 export const Wether = () => {
     const [IcityEnter, setSityEnter] = useState('')
@@ -44,7 +43,7 @@ export const Wether = () => {
                 {IshowWeather === true?
                     <WeatherINfo Iresponse={Iresponse}/>
                     :
-                    <></>
+                    <p>город не выбран</p>
                 }
             </div>
         </div>

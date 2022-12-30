@@ -1,9 +1,10 @@
 import React from "react";
+import { DeleteNote } from '../hooks/DeleteNote'
 
 function TodoTask({post, IListName, setListName, deleteNote}){
     function removeTodo(event){
         setListName(IListName.filter(elem => elem.id !== post.id));
-        deleteNote(event)
+        DeleteNote(event)
     }
 
     return(
