@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { MyButton } from "./UI/button/MyButton";
 import { MyInput } from './UI/input/MyInput'
+import { AddIndexedDB } from '../hooks/AddIndexedDB'
 
 export const FormPost = ({create, addIndexedDB}) => {
     const [Itask, setTask] = useState({name:''})
@@ -11,7 +12,7 @@ export const FormPost = ({create, addIndexedDB}) => {
             event.preventDefault()
             const newTodoTask = {...Itask, id: Date.now()}
             create(newTodoTask)
-            addIndexedDB(Itask.name, newTodoTask.id)
+            AddIndexedDB(Itask.name, newTodoTask.id)
             setTask({name:''})
         }else{
             event.preventDefault()
