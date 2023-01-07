@@ -72,7 +72,7 @@ input:focus {
     column-gap: 10px;
 }
 
-.navLink.activeStyle {
+.active {
     color: white;
     text-transform: uppercase;
 }
